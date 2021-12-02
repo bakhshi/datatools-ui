@@ -4,7 +4,6 @@ import clone from 'lodash/cloneDeep'
 
 import UserPermissions from '../../../lib/common/user/UserPermissions'
 import UserSubscriptions from '../../../lib/common/user/UserSubscriptions'
-
 import type {
   Deployment,
   FeedVersion,
@@ -61,6 +60,10 @@ export function makeMockDeployment (
     routerId: null,
     skipOsmExtract: false,
     tripPlannerVersion: 'OTP_1',
+    peliasUpdate: null,
+    peliasResetDb: null,
+    peliasWebhookUrl: null,
+    peliasCsvFiles: [],
     user: null
   }
 }
@@ -86,6 +89,7 @@ export const mockProject = {
   feedSources: [],
   id: 'mock-project-id',
   lastUpdated: 1553236399556,
+  labels: [],
   name: 'mock-project',
   organizationId: null,
   otpServers: [],
@@ -134,6 +138,7 @@ export const mockFeedWithVersion = {
     tripCount: 415
   },
   latestVersionId: 'mock-feed-version-id',
+  labelIds: [],
   name: 'test feed with a version',
   noteCount: 0,
   organizationId: null,
@@ -158,6 +163,7 @@ export const mockFeedWithoutVersion = {
   isPublic: false,
   lastFetched: null,
   name: 'test feed with no version',
+  labelIds: [],
   noteCount: 0,
   organizationId: null,
   projectId: mockProject.id,
