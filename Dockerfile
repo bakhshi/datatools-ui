@@ -25,7 +25,7 @@ ENV MAPBOX_ATTRIBUTION=mapbox
 ENV DISABLE_AUTH=true
 
 RUN yarn
-RUN npm run build
+RUN npm run build -- --minify
 
 
 FROM nginx:alpine
