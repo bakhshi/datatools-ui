@@ -47,3 +47,4 @@ COPY --from=build-stage /datatools-ui/dist /usr/share/nginx/html/dist
 COPY --from=build-stage /datatools-ui/index.html /usr/share/nginx/html/index.html
 
 CMD ["/start-nginx.sh"]
+
